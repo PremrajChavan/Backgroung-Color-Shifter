@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorShifter</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<style>
+    .div1 {
+
+        height: 50px;
+        width: 50px;
+        
+        /* border: 2px solid; */
+    }
+</style>
+
+<body class="text-center">
+    <h3 class="mt-5"> <i> Choose Background Color </i></h3>
+    <div class=" mt-5 ">
+        <input type="button" class="div1 btn bg-danger" id="red">
+        <input type="button" class="div1 btn bg-dark" id="black">    
+        <input type="button" class="div1 btn bg-success" id="green">    
+        <input type="button" class="div1 btn bg-info" id="aqua"> 
+        
+       
+    </div>
+    <div class="mt-5">
+    <Span>***</Span>
+
+    <script>
+       const buttons = document.querySelectorAll('.btn')
+    //    console.log(buttons)
+    const body=document.querySelector("body")
+    // console.log(body)
+    buttons.forEach(function(btn){
+        // console.log(btn)
+        btn.addEventListener('click',function(e){
+        // console.log(e)
+        // console.log(e.target)
+        if(e.target.id==='red')
+        {
+            body.style.backgroundColor='red';
+            document.querySelector("h3").style.color='black';
+        }
+        if(e.target.id==='black')
+        {
+            body.style.backgroundColor='rgb(34, 32, 32)';
+            document.querySelector("h3").style.color='white';
+            
+        }
+        if(e.target.id==='green')
+        {
+            body.style.backgroundColor='green';
+            document.querySelector("h3").style.color='black';
+        }
+        if(e.target.id==='aqua')
+        {
+            body.style.backgroundColor='rgb(0, 195, 255)';
+            document.querySelector("h3").style.color='black';
+        }
+        })
+    })
+    </script>
+</div>
+</body>
+
+</html>
